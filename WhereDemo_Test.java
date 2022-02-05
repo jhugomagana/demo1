@@ -26,6 +26,14 @@ public class WhereDemo_Test {
         assertEquals(expect, toTest);
     }
 
+    @Test
+    public void call_dirFromFile() throws IOException {
+        String testFile = "thisDir.txt";
+        String toTest = WhereDemo.dirFromFile(testFile);
+        String expect = pwdThisDir();
+        assertEquals(expect, toTest);
+    }
+
     private String pwdThisDir() throws IOException {
         try { 
             Process process = Runtime.getRuntime().exec("pwd"); // for Linux
