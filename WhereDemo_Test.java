@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 // java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore WhereDemo_Test
 
 // linux commands
-// javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar whereDemo_Test.java WhereDemo_Test.java
+// javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar WhereDemo_Test.java
 // java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore WhereDemo_Test
 
 public class WhereDemo_Test {
@@ -26,7 +26,7 @@ public class WhereDemo_Test {
         assertEquals(expect, toTest);
     }
     
-    //TEST with pwd > thisDir.txt in current directory
+    //TEST with this linux-cmd :~:$ [ pwd > thisDir.txt ] within working/testing directory
     @Test
     public void call_dirFromFile() throws IOException {
         String testFile = "thisDir.txt";
