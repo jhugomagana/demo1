@@ -25,7 +25,8 @@ public class WhereDemo_Test {
         String expect = pwdThisDir();
         assertEquals(expect, toTest);
     }
-
+    
+    //TEST with pwd > thisDir.txt in current directory
     @Test
     public void call_dirFromFile() throws IOException {
         String testFile = "thisDir.txt";
