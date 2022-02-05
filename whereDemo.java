@@ -1,16 +1,19 @@
-import java.io.IOException;
-import java.nio.file.Path;
+import java.lang.StringBuilder;
+import java.util.stream.IntStream;
 
-class WhereAmI {
+class WhereDemo {
 	
     public static String thisDirectory() {
-        String myDir = System.getProperty("user.dir");
-        return myDir;
+        StringBuilder myDir = new StringBuilder(System.getProperty("user.dir"));
+        System.out.println("WhereDemo.thisDirectory() called\n" + "codePoints for this string:");
+        IntStream thisStream = myDir.codePoints();
+        thisStream.forEach(System.out::println);
+        return myDir.toString();
 
     }
     
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        System.out.print(thisDirectory());
+        System.out.println("Calling thisDirectory() from main()\n" + thisDirectory());
     }
 }
