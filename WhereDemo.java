@@ -21,8 +21,8 @@ class WhereDemo {
         StringBuilder sb_txtDir = new StringBuilder(Files.readString(fileName));
         
         // Files.readString(Path) includes extra eof character in returning String - FAILS assertEquals
-        // int index_eof = sb_txtDir.length();
-        // sb_txtDir = sb_txtDir.deleteCharAt(--index_eof);
+        int index_eof = sb_txtDir.length();
+        sb_txtDir = sb_txtDir.deleteCharAt(--index_eof);
 
         System.out.println("WhereDemo.thisDirectory("+txtFile+") called\n" + "codePoints for this string:");
         IntStream fileStream = sb_txtDir.codePoints();

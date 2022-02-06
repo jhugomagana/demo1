@@ -16,7 +16,7 @@ public class WhereDemo_Test {
     //test to fail
     @Test
     public void addition() {
-        assertEquals(5, 1 + 1);
+        assertEquals(2, 1 + 1);
     }
 
     @Test
